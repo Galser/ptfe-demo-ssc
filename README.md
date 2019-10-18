@@ -17,7 +17,7 @@ To learn more about the mentioned above tools and technologies -  please check s
 git clone https://github.com/Galser/tf-custom-plugin-kitchen-test.git
 ```
 
-- Previous step should create the folder that contains a copy of the repository. Default name is going to be the same as the name of repository e.g. `tf-custom-plugin-kitchen-test`. Locate and open it.
+- Previous step should create a folder that contains a copy of the repository. The default name is going to be the same as the name of repository e.g. `tf-custom-plugin-kitchen-test`. Locate and open it.
     ```
     cd tf-custom-plugin-kitchen-test
     ```
@@ -95,7 +95,7 @@ git clone https://github.com/Galser/tf-custom-plugin-kitchen-test.git
     sudo bash install.sh.
     ```
 
->Note The installation will take a few minutes and you'll be presented with a message about how and where to access the rest of the setup via the web at the end.   This will be [http://192.168.56.22:8800](http://192.168.56.22:8800).  For the guidelines on the possible questions during this portion of setup, see the next section. 
+>Note The installation will take a few minutes and you'll be presented with a message about how and where to access the rest of the setup via the web at the end.   This will be [http://192.168.56.22:8800](http://192.168.56.22:8800).  For the guidelines on the possible questions during this portion of the setup, see the next section. 
 
 ### Example of the terminal (shell) part of the installation and possible questions 
 - Start of the installation : 
@@ -104,8 +104,8 @@ git clone https://github.com/Galser/tf-custom-plugin-kitchen-test.git
     Determining local address
     The installer was unable to automatically detect the private IP address of this machine.
     Please choose one of the following network interfaces:
-    [0] enp0s3	10.0.2.15
-    [1] enp0s8	192.168.56.22
+    [0] enp0s3  10.0.2.15
+    [1] enp0s8  192.168.56.22
     ```
     At the screen above, installer is not able to correctly choose private IP address, you need to choose. For our example the correct one is number [1]
 - Proceed with it :
@@ -157,42 +157,42 @@ git clone https://github.com/Galser/tf-custom-plugin-kitchen-test.git
 
     http://192.168.56.22:8800
     ```
-## Web-based portion of installation
+## Web-based portion of the installation
 - Open your favorite browser and access the link that had been presented to you at the previous step : [Web-stage of PTFE installation](http://192.168.56.22:8800). You going to see the page :
 ![Bypass TSL warning](screenshots/0_bypass_tls_warning.png)
 Press **[Continue to Setup]**
-- As we using self-signed certificates for this project, you will see a security warning when first connecting. **This is expected and you'll need to proceed with the connection anyway.** And later we are going to change that address to a proper FQDN form, this one : `192.168.56.22.xip.io`
+- As we using self-signed certificates for this project, you will see a security warning when first connecting. **This is expected and you'll need to proceed with the connection anyway.** And later we are going to change that address to a proper FQDN form, this one: `192.168.56.22.xip.io`
 - Now you will be presented with settings screen :
 ![Installation certificate request](screenshots/1_install_cert_question.jpg)
-Where you will need to enter hostname : `192.168.56.22.xip.io` and press button **[Use Self-Signed Cert]**
-- Now you will need to present your license file. Usually it comes in a special tar-ball package with extension RLI. Press [Choose license] , Locate the file, and upload. 
+Where you will need to enter hostname: `192.168.56.22.xip.io` and press button **[Use Self-Signed Cert]**
+- Now you will need to present your license file. Usually, it comes in a special tar-ball package with extension RLI. Press [Choose license] , Locate the file and upload. 
 ![Add license form](screenshots/2_add_license.png)
 - Next screen allows you to select between *Online* and *airgapped* installation. Choose **[Online]** :
 ![Choose install type](screenshots/3_choose_install_type.png)
 And press **[Continue]** button
-- On the next step you will need to enter password, that can be used in the future to access THIS, Admin Console : 
+- On the next step, you will need to enter the password, that can be used in the future to access THIS, Admin Console : 
 ![Secure Admin COnsole](screenshots/3_1_secure_admin_console.png)
 Enter the desired password, and press continue
-- Now you will see the "Preflight Cheks", when all the main requiremetns for the PTFE installation checked and presentd to you the top of screen looks like : 
+- Now you will see the "Preflight Checks", when all the main requirements for the PTFE installation checked and presented to you the top of the screen looks like : 
 ![Preflight checks](screenshots/3_2_prefilght_checks.png)
 Once more, press **[Continue]** button
-- The next screen present all your settings in one place : 
+- The next screen presents all your settings in one place : 
 ![Settings before restart](screenshots/3_3_settings.png)
 Check them visually, scroll down to the **Installation Type** section and select **[Demo]**
 After that =  press **[Save]** button at the bottom of the page
 press **[save]** button to save all you settings. And you going to be present with the following informational screen : 
-![Settings saaved, restart now](screenshots/4_restat_now.png)
+![Settings saved, restart now](screenshots/4_restat_now.png)
  Press **[Restart Now]** 
-- At his moment PTFE will do a full start of all internal services, it cna take a couple of minutes, refresh the windows from time to time :
+- At his moment PTFE will do a full start of all internal services, it can take a couple of minutes, refresh the windows from time to time :
 ![Starting dashboard](screenshots/5_starting.png)
-  > Note : ..Depending from your bvrowser and/or browser settings the starting in the left part of Dashboard - never changes unless you reload the page. So force-reload the page after 2-3 minutes. 
- - Wait a couple of minutes, at the left rectangel, below the button [Stop now] there is link **[Open]** :
- ![Started](screenshots/6_started.png)
- Open it, this will lead ytou to first-time setup of the admin user 
- - Setup your admin user : 
- ![Setup admin user](screenshots/7_admin_setup.png)
- Fill in the form and press **[Create an account]**
- - Now you are logged in the brand fresh Private Terraform Enterprise. Congratulations.
+  > Note:..Depending on your browser and/or browser settings the starting in the left part of Dashboard - never changes unless you reload the page. So force-reload the page after 2-3 minutes. 
+- Wait a couple of minutes for the state at the left rectangle to be changed to **Started**. Now, below the button [Stop now] there is link **[Open]** :
+    ![Started](screenshots/6_started.png)
+    Open it, this will lead you to the first-time setup of the admin user :
+- Set up your admin user : 
+    ![Setup admin user](screenshots/7_admin_setup.png)
+    Fill in the form and press **[Create an account]**
+- Now you are logged in the brand fresh Private Terraform Enterprise. Congratulations.
 
 
 
@@ -206,6 +206,7 @@ press **[save]** button to save all you settings. And you going to be present wi
 - [x] define objectives as we go
 - [x] prepare vagrant vm
 - [x] prepare step-by step instructions for installation part
+- [x] update README
 
 # notes
 
