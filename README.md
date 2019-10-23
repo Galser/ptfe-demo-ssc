@@ -29,19 +29,11 @@ git clone https://github.com/Galser/ptfe-demo-ssc.git
  
     First-time start can take some time, as Vagrant need to download and import box image, and you can see something like this :
     ```
+    vagrant up
     Bringing machine 'default' up with 'virtualbox' provider...
-    ==> default: Box 'alvaro/bionic64' could not be found. Attempting to find and install...
-        default: Box Provider: virtualbox
-        default: Box Version: >= 0
-    ==> default: Loading metadata for box 'alvaro/bionic64'
-        default: URL: https://vagrantcloud.com/alvaro/bionic64
-    ==> default: Adding box 'alvaro/bionic64' (v19.07.30) for provider: virtualbox
-        default: Downloading: https://vagrantcloud.com/alvaro/boxes/bionic64/versions/19.07.30/providers/virtualbox.box
-        default: Download redirected to host: vagrantcloud-files-production.s3.amazonaws.com
-    ==> default: Successfully added box 'alvaro/bionic64' (v19.07.30) for 'virtualbox'!
-    ==> default: Importing base box 'alvaro/bionic64'...
+    ==> default: Importing base box 'galser/bionic64-for-ptfe'...
     ==> default: Matching MAC address for NAT networking...
-    ==> default: Checking if box 'alvaro/bionic64' version '19.07.30' is up to date...
+    ==> default: Checking if box 'galser/bionic64-for-ptfe' version '0.0.1' is up to date...
     ==> default: Setting the name of the VM: ptfe-demo
     ==> default: Clearing any previously set network interfaces...
     ==> default: Preparing network interfaces based on configuration...
@@ -67,7 +59,7 @@ git clone https://github.com/Galser/ptfe-demo-ssc.git
     ==> default: Setting hostname...
     ==> default: Configuring and enabling network interfaces...
     ==> default: Mounting shared folders...
-        default: /vagrant => /Users/andrii/labs/skills/ptfe-demo-ssc
+    default: /vagrant => /Users/../ptfe-demo-ssc
     ```
 - Login to you fresh VM , to do so execute : 
     ```
@@ -104,8 +96,9 @@ git clone https://github.com/Galser/ptfe-demo-ssc.git
     Determining local address
     The installer was unable to automatically detect the private IP address of this machine.
     Please choose one of the following network interfaces:
-    [0] enp0s3  10.0.2.15
-    [1] enp0s8  192.168.56.22
+    [0] enp0s3	10.0.2.15
+    [1] enp0s8	192.168.56.22
+    [2] docker0	172.17.0.1
     ```
     At the screen above, installer is not able to correctly choose private IP address, you need to choose. For our example the correct one is number [1]
 - Proceed with it :
@@ -196,9 +189,6 @@ press **[save]** button to save all you settings. And you going to be present wi
 
 
 
-## VM 
-2 cores, 4GB of RAM
-
 # TODO
 
 
@@ -218,5 +208,3 @@ press **[save]** button to save all you settings. And you going to be present wi
 4. **For managing VM** (virtual machines), we are going to use **Vagrant**. To install **Vagrant** , please follow instructions here : [official Vargant installation manual](https://www.vagrantup.com/docs/installation/)
 5. **Terraform Enterprise** - is HashiCorp's self-hosted distribution of Terraform Cloud. It offers enterprises a private instance of the Terraform Cloud application, with no resource limits and with additional enterprise-grade architectural features like audit logging and SAML single sign-on.
 *Terraform Cloud* is an application that helps teams use Terraform together. It manages Terraform runs in a consistent and reliable environment, and includes easy access to shared state and secret data, access controls for approving changes to infrastructure, a private registry for sharing Terraform modules, detailed policy controls for governing the contents of Terraform configurations, and more. You can read more [here](https://www.terraform.io/docs/enterprise/index.html)
-
-
