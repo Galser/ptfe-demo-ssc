@@ -12,14 +12,14 @@ This repository assumes general knowledge about Terraform, if not, please get yo
 To learn more about the mentioned above tools and technologies -  please check section [Technologies near the end of the README](#technologies)
 
 # How to use
-- Download copy of the code (*clone* in Git terminology) - go to the location of your choice (normally some place in home folder) and run in terminal; in case you are using alternative Git Client - please follow appropriate instruction for it and download(*clone*) [this repo](https://github.com/Galser/tf-custom-plugin-kitchen-test.git). 
+- Download copy of the code (*clone* in Git terminology) - go to the location of your choice (normally some place in home folder) and run in terminal; in case you are using alternative Git Client - please follow appropriate instruction for it and download(*clone*) [this repo](https://github.com/Galser/ptfe-demo-ssc.git). 
 ```
-git clone https://github.com/Galser/tf-custom-plugin-kitchen-test.git
+git clone https://github.com/Galser/ptfe-demo-ssc.git
 ```
 
-- Previous step should create a folder that contains a copy of the repository. The default name is going to be the same as the name of repository e.g. `tf-custom-plugin-kitchen-test`. Locate and open it.
+- Previous step should create a folder that contains a copy of the repository. The default name is going to be the same as the name of repository e.g. `ptfe-demo-ssc`. Locate and open it.
     ```
-    cd tf-custom-plugin-kitchen-test
+    cd ptfe-demo-ssc
     ```
 - We going to run install PTFE in virtual machine, to prepare that virtual machine please run :
     ```
@@ -92,7 +92,7 @@ git clone https://github.com/Galser/tf-custom-plugin-kitchen-test.git
     ```
     and, once you are satisfied with the script's content, execute it with 
     ```bash
-    sudo bash install.sh.
+    sudo bash install.sh
     ```
 
 >Note The installation will take a few minutes and you'll be presented with a message about how and where to access the rest of the setup via the web at the end.   This will be [http://192.168.56.22:8800](http://192.168.56.22:8800).  For the guidelines on the possible questions during this portion of the setup, see the next section. 
