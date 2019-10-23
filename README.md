@@ -158,6 +158,7 @@ Press **[Continue to Setup]**
 - Now you will be presented with settings screen :
 ![Installation certificate request](screenshots/1_install_cert_question.jpg)
 Where you will need to enter hostname: `192.168.56.22.xip.io` and press button **[Use Self-Signed Cert]**
+- You need to confirm security warning of the browser once more, as we just had changed the URL through  which we accesing our PTFE installation. Please do so and proceed. 
 - Now you will need to present your license file. Usually, it comes in a special tar-ball package with extension RLI. Press [Choose license] , Locate the file and upload. 
 ![Add license form](screenshots/2_add_license.png)
 - Next screen allows you to select between *Online* and *airgapped* installation. Choose **[Online]** :
